@@ -15,7 +15,7 @@ are only useful for seeing the relationship between two individuals.
 
 ## User Interface
 
-Basically, you create boxes (which represent types) and draw lines between them to map out relations. See the instructions for more information.
+Basically, you create boxes (which represent types) and draw lines between them to map out relations. When running the program, see the instructions for more information.
 
 In this program, accpetable type code formats are MBTI and Socionics format. So ISTP and LSI are
 acceptable, but ISTj is not. You can intermix formats (ex: have one box as ISTP and another as SEE).
@@ -26,6 +26,7 @@ Cool features:
  - if you delete a box or type in an invalid type, all the lines previously connected to the box will disappear
 
 ## How it works
+
 Each box represents a Type object. Since you can determine the rest of the function stack from the 
 first two functions, each Type object only stores the first two functions. A Calculator object, 
 created when a line is drawn between two objects, compares one type (the first selected box) to 
@@ -41,7 +42,7 @@ each digit gives us some information about the function represented:
 For example, 111 represents Ti, 900 is Se, 911 is Ni, and 100 is Fe
   
 This makes type comparison quite elegant, allowing comparison of two serial numbers to be
-generalized (see calculator.js getRelation function).
+generalized (see [getRelation function](calculator.js)).
 
 ## About the creator
 I'm a high school student interested in typology. I first made an intertype relations
