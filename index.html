@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <svg id="svg1" ondblclick="newBox(event)" ondragover="allowDrop(event)"></svg>
+    <div id="div1">
+      <h1>Intertype Relations Mapper for Socionics and MBTI</h1> Instructions (click on boxes to show/hide): 
+      <ol> 
+      <li id="l1" onclick="changeVisibility(event)" class="topLi"> Setting up boxes for each type
+        <ul id="u1">
+          <li> <strong>To create new boxes: </strong> Double-click anywhere. All boxes appear in the upper left hand corner of the screen, so you may have to move boxes to see the new boxes that have been generated. </li>
+          <li> <strong> To set the type for a box: </strong> Type where it says "MBTI type" and press enter. If the box is white after you press enter the type you entered is invalid. You can still change the type of the box after you've set it. </li>
+          <li> <strong> To move boxes: </strong> Click and drag. The final position of the box will be centered around your cursor.</li>
+          <li> <strong> To delete boxes: </strong> Click inside the box and press esc. </li>
+        </ul> 
+      <li id="l2" onclick="changeVisibility(event)" class="topLi"> Setting up line relations between types
+        <ul id="u2">
+          <li><strong>To create a line between two types: </strong> Click on the first type and press shift. (Border should thicken if done correctly.) Click on the type you want to compare to and press shift. See the line appear </li>
+          <li><strong>To move lines: </strong> Move the boxes the line is attached to, and the ends of the line will move with the boxes.</li>
+          <li><strong>To delete lines: </strong> Click on the line you would like to delete.</strong> </li>
+        </ul> 
+      <li id="l3" onclick="changeVisibility(event)" class="topLi"> See what relations the lines correspond to
+        <ul id="u3"> 
+          <li> <strong> See text description for specific line: </strong> Hover over the line</li>
+          <li> <strong> Line color code: </strong> See what color corresponds to what relation down below. Rank 1 is best, 16 worst.
+            <ol>
+              <li class = "colorCode" style="color:hsl(120, 100%, 30%);">Dual (Soulmate), </li>
+              <li class = "colorCode" style="color:hsl(130, 100%, 40%);">Identical (Same type),</li>
+              <li class = "colorCode" style="color:hsl(156, 100%, 52%);">Activity (Chill friends),</li>
+              <li class = "colorCode" style="color:hsl(172, 100%, 52%);">Mirror (The introverted/extrovered versions of each other), </li>
+              <li class = "colorCode" style="color:hsl(178, 100%, 42%);">Kindred (Share 1st function), </li>
+              <li class = "colorCode" style="color:hsl(190, 100%, 42%);">Look-a-like (Share 2nd function), </li>
+              <li class = "colorCode" style="color:hsl(200, 100%, 42%);">Semi-dual (Same as soulmate but with different second function), </li>
+              <li class = "colorCode" style="color:hsl(214, 100%, 42%);">Illusionary (Same as soulmate but with different first function), </li>
+              <li class = "colorCode" style="color:hsl(234, 100%, 36%);">Super-ego (Each type seems most detrimental to society to the other), </li>
+              <li class = "colorCode" style="color:hsl(266, 100%, 45%);">Benefit: First selected type is Benifactee, </li>
+              <li class = "colorCode" style="color:hsl(275, 100%, 50%);">Benefit: First selected type is Benefactor, </li>
+              <li class = "colorCode" style="color:hsl(284, 100%, 53%);">Supervision: First selected type is Supervisor, </li>
+              <li class = "colorCode" style="color:hsl(295, 100%, 53%);">Supervision: First selected type is Supervisee, </li>
+              <li class = "colorCode" style="color:hsl(313, 100%, 53%);">Quasi-identical (Rival)</li>
+              <li class = "colorCode" style="color:hsl(335, 100%, 53%);">Contrary (Ultimate Rival), </li>
+              <li class = "colorCode" style="color:hsl(355, 100%, 53%);">Conflict</li>
+            </ol>
+        </ul>
+      </ol> 
+    </div>
+    <input id="i0" type="text" placeholder="MBTI type" draggable="true" ondragend="moveBox(event)" ondblclick="newBox(event)">
+    <script src="type.js"></script>
+    <script src="calculator.js"></script>
+    <script src="script.js"></script>
+    <script>
+      function changeVisibility(event) {
+        var ulId = "u"+event.target.id.substring(1);
+        var ulElement = document.getElementById(ulId);
+        if (ulElement.style.display == "block") ulElement.style.display = "none";
+        else ulElement.style.display = "block";
+      }
+      function allowDrop(event) {
+        event.preventDefault();
+      }   
+    </script>
+  </body>
+</html>
