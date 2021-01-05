@@ -60,6 +60,6 @@ version of this before college. My ultimate goal is to get this published as an 
 3. score calculator for one person or the whole group
 4. pagination
 5. chart showing how many times each relation shows up 
-6. naming boxes
+6. assign labels (ex: "mom" "bob") to boxes, not just types
 7. buttons for everything instead of always using esc, ctrl, etc
 8. save button so you can save your maps
