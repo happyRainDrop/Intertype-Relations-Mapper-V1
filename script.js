@@ -136,7 +136,6 @@ function createLine(id1, id2) {
   var svgElem = document.getElementById("svg1");
   var line = document.createElementNS("http://www.w3.org/2000/svg","line");
   line.setAttributeNS(null, "id", "l"+lineIndex);
-  line.setAttributeNS(null, "class", "tooltip");
   line.setAttributeNS(null, "startBoxId", id1);
   line.setAttributeNS(null, "endBoxId", id2);
   line.setAttributeNS(null, "x1", x1);
@@ -149,7 +148,6 @@ function createLine(id1, id2) {
   else svgElem.insertBefore(line, lineArray[lineArray.length-1]);
   // add event listener (for deletion)
   line.addEventListener("click", deleteLine);
-  //line.addEventListener("mouseover", alertTooltip);
   // add tooltip
   var title = document.createElementNS("http://www.w3.org/2000/svg","title");
   title.id = "t"+lineIndex;
