@@ -7,24 +7,23 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <svg id="svg1" ondblclick="newBox(event)" ondragover="allowDrop(event)"></svg>
     <div id="div1">
       <h1>Intertype Relations Mapper for Socionics and MBTI</h1> Instructions (click on boxes to show/hide): 
       <ol> 
-      <li id="l1" onclick="changeVisibility(event)" class="topLi"> Setting up boxes for each type
+      <li id="li1" onclick="changeVisibility(event)" class="topLi"> Setting up boxes for each type
         <ul id="u1">
           <li> <strong>To create new boxes: </strong> Double-click anywhere. All boxes appear in the upper left hand corner of the screen, so you may have to move boxes to see the new boxes that have been generated. </li>
           <li> <strong> To set the type for a box: </strong> Type where it says "MBTI type" and press enter. If the box is white after you press enter the type you entered is invalid. You can still change the type of the box after you've set it. </li>
           <li> <strong> To move boxes: </strong> Click and drag. The final position of the box will be centered around your cursor.</li>
           <li> <strong> To delete boxes: </strong> Click inside the box and press esc. </li>
         </ul> 
-      <li id="l2" onclick="changeVisibility(event)" class="topLi"> Setting up line relations between types
+      <li id="li2" onclick="changeVisibility(event)" class="topLi"> Setting up line relations between types
         <ul id="u2">
           <li><strong>To create a line between two types: </strong> Click on the first type and press shift. (Border should thicken if done correctly.) Click on the type you want to compare to and press shift. See the line appear </li>
           <li><strong>To move lines: </strong> Move the boxes the line is attached to, and the ends of the line will move with the boxes.</li>
           <li><strong>To delete lines: </strong> Click on the line you would like to delete.</strong> </li>
         </ul> 
-      <li id="l3" onclick="changeVisibility(event)" class="topLi"> See what relations the lines correspond to
+      <li id="li3" onclick="changeVisibility(event)" class="topLi"> See what relations the lines correspond to
         <ul id="u3"> 
           <li> <strong> See text description for specific line: </strong> Hover over the line</li>
           <li> <strong> Line color code: </strong> See what color corresponds to what relation down below. Rank 1 is best, 16 worst.
@@ -49,20 +48,30 @@
         </ul>
       </ol> 
     </div>
-    <input id="i0" type="text" placeholder="MBTI type" draggable="true" ondragend="moveBox(event)" ondblclick="newBox(event)">
+    <btn id="b1" onclick="reset(event)"> Reset </btn>
+    <btn id="b2" onclick="drawAllLines()"> Draw all lines </btn>
+    <btn id="b3" onclick="removeAllLines()"> Delete all lines </btn>
+    <btn id="b4" onclick="scoreOne()"> See avg. score for 1 person </btn>
+    <btn id="b5" onclick="getAverageScoreForGroup()"> See avg. score for whole group </btn>
+    <span id="output"> Output text for score buttons goes here </span>
+    <div id="div2" ondragover="allowDrop(event)">
+      <svg id="svg1" ondblclick="newBox(event)">
+      </svg>
+      <input id="i0" type="text" placeholder="MBTI type" draggable="true" ondragend="moveBox(event)" ondblclick="newBox(event)">
+    </div>
     <script src="type.js"></script>
     <script src="calculator.js"></script>
     <script src="script.js"></script>
     <script>
       function changeVisibility(event) {
-        var ulId = "u"+event.target.id.substring(1);
+        var ulId = "u"+event.target.id.substring(2);
         var ulElement = document.getElementById(ulId);
         if (ulElement.style.display == "block") ulElement.style.display = "none";
         else ulElement.style.display = "block";
       }
       function allowDrop(event) {
         event.preventDefault();
-      }   
+      } 
     </script>
   </body>
 </html>
