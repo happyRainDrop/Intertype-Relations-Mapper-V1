@@ -55,10 +55,10 @@ yet. I plan to learn HTML/CSS/JS, SVG, XML, and jQuery more in depth to create a
 version of this before college. My ultimate goal is to get this published as an independent website and/or app.
 
 ## Coming in future versions
-1. Pagination
-2. Sidebars
+1. Overall better look/design (buttons enlarge when hovered upon, different font, maybe a logo, etc)
+2. Sidebar navigation
 3. Templates and/or demo
 4. Chart showing how many times each relation shows up 
-5. assign labels (ex: "mom" "bob") to boxes, not just types
-6. buttons for everything instead of always using esc, ctrl, etc
-7. save button so you can save your maps
+5. Assign labels (ex: "mom" "bob") to boxes, not just types
+6. Buttons for everything instead of always using esc, ctrl, etc
+7. Save button so you can save your maps
