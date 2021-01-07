@@ -55,11 +55,10 @@ yet. I plan to learn HTML/CSS/JS, SVG, XML, and jQuery more in depth to create a
 version of this before college. My ultimate goal is to get this published as an independent website and/or app.
 
 ## Coming in future versions
-1. reset button
-2. show all relations button
-3. score calculator for one person or the whole group
-4. pagination
-5. chart showing how many times each relation shows up 
-6. assign labels (ex: "mom" "bob") to boxes, not just types
-7. buttons for everything instead of always using esc, ctrl, etc
-8. save button so you can save your maps
+1. Pagination
+2. Sidebars
+3. Templates and/or demo
+4. Chart showing how many times each relation shows up 
+5. assign labels (ex: "mom" "bob") to boxes, not just types
+6. buttons for everything instead of always using esc, ctrl, etc
+7. save button so you can save your maps
