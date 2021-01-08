@@ -146,10 +146,10 @@ function createLine(id1, id2) {
   var calc1 = new Calculator(type1);
   var relationCode = calc1.getRelation(type2);
   // create a line from (x1, y1) to (x2, y2)
-  var x1 = parseInt(box1.style.left)+50;
-  var y1 = parseInt(box1.style.top)+25;
-  var x2 = parseInt(box2.style.left)+50;
-  var y2 = parseInt(box2.style.top)+25;
+  var x1 = parseInt(box1.style.left)+50+15;
+  var y1 = parseInt(box1.style.top)+25+15;
+  var x2 = parseInt(box2.style.left)+50+15;
+  var y2 = parseInt(box2.style.top)+25+15;
   var svgElem = document.getElementById("svg1");
   var line = document.createElementNS("http://www.w3.org/2000/svg","line");
   line.setAttributeNS(null, "id", "l"+lineIndex);
