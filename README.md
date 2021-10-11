@@ -1,5 +1,9 @@
 # Intertype-Relations-Mapper-V1
 
+## Note
+
+This project is no longer being updated. You can try it out [here](https://intertype-relations-calculator.neocities.org/). Works on Chrome.
+
 ## Overview & Purpose
 
 According to MBTI and socionics theory, there are 8 cognitive functions, and 16 cognitive types
@@ -44,21 +48,3 @@ For example, 111 represents Ti, 900 is Se, 911 is Ni, and 100 is Fe
 This makes type comparison quite elegant, allowing comparison of two serial numbers to be
 generalized (see [getRelation function](calculator.js)).
 
-## About the creator
-I'm a high school student interested in typology. I first made an intertype relations
-calculator [here](https://repl.it/@RuthBerkun/Intertype-Relations-Calculator#Calculator.java) but then
-quickly realized it would be difficult to map out relations between multiple types in Java. I thought
-it would be easier (and cooler!) to map out relations spatially instead of just with text and resolved
-to remix the calculator in HTML/CSS/JS someday. And after months of procrastinating from learning 
-HTML/CSS/JS, someday has come! I'm still pretty new to HTML/CSS/JS so sorry the program is not that great
-yet. I plan to learn HTML/CSS/JS, SVG, XML, and jQuery more in depth to create a better
-version of this before college. My ultimate goal is to get this published as an independent website and/or app.
-
-## Coming in future versions
-1. Overall better look/design (buttons enlarge when hovered upon, different font, maybe a logo, etc)
-2. Sidebar navigation
-3. Templates and/or demo
-4. Chart showing how many times each relation shows up 
-5. Assign labels (ex: "mom" "bob") to boxes, not just types
-6. Buttons for everything instead of always using esc, ctrl, etc
-7. Save button so you can save your maps
